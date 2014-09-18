@@ -14,7 +14,7 @@
 *
 * Created:  10.01.2009
 *
-* Description:  Modified auth system based on redux_auth with extensive customization.  This is basically what Redux Auth 2 should be.
+* Description:  Modified auth system based on redux_auth with extensive customization.
 * Original Author name has been kept but that does not mean that the method has not been modified.
 *
 * Requirements: PHP5 or above
@@ -27,10 +27,10 @@
 | -------------------------------------------------------------------------
 | Database table names.
 */
-$config['tables']['users']		= 'users';
-$config['tables']['groups']		= 'groups';
-$config['tables']['users_groups']	= 'users_groups';
-$config['tables']['login_attempts']	= 'login_attempts';
+$config['tables']['users']				= 'auth_users';
+$config['tables']['groups']			= 'auth_groups';
+$config['tables']['users_groups']	= 'auth_users_groups';
+$config['tables']['login_attempts']	= 'auth_login_attempts';
 
 /*
  | Users table column and Group table column you want to join WITH.
@@ -38,8 +38,8 @@ $config['tables']['login_attempts']	= 'login_attempts';
  | Joins from users.id
  | Joins from groups.id
  */
-$config['join']['users']		= 'user_id';
-$config['join']['groups']		= 'group_id';
+$config['join']['users']				= 'user_id';
+$config['join']['groups']				= 'group_id';
 
 /*
  | -------------------------------------------------------------------------
@@ -66,7 +66,7 @@ $config['join']['groups']		= 'group_id';
  | Versions 5.3.7 or greater should use the default of "$2y$".
  */
 $config['hash_method']    = 'bcrypt';	// sha1 or bcrypt, bcrypt is STRONGLY recommended
-$config['default_rounds'] = 8;		// This does not apply if random_rounds is set to true
+$config['default_rounds'] = 8;			// This does not apply if random_rounds is set to true
 $config['random_rounds']  = FALSE;
 $config['min_rounds']     = 5;
 $config['max_rounds']     = 9;
@@ -118,9 +118,7 @@ $config['identity_cookie_name'] = 'identity';
  | 	  array  = Manually set your email config settings
  */
 $config['use_ci_email'] = FALSE; // Send Email using the builtin CI email class, if false it will return the code and the identity
-$config['email_config'] = array(
-	'mailtype' => 'html',
-);
+$config['email_config'] = array( 'mailtype' => 'html', );
 
 /*
  | -------------------------------------------------------------------------
@@ -175,10 +173,10 @@ $config['store_salt']  = FALSE;
  | -------------------------------------------------------------------------
  */
 $config['delimiters_source']       = 'config'; 	// "config" = use the settings defined here, "form_validation" = use the settings defined in CI's form validation library
-$config['message_start_delimiter'] = '<p>'; 	// Message start delimiter
+$config['message_start_delimiter'] = '<p>';		// Message start delimiter
 $config['message_end_delimiter']   = '</p>'; 	// Message end delimiter
 $config['error_start_delimiter']   = '<p>';		// Error mesage start delimiter
-$config['error_end_delimiter']     = '</p>';	// Error mesage end delimiter
+$config['error_end_delimiter']     = '</p>';		// Error mesage end delimiter
 
 /* End of file ion_auth.php */
 /* Location: ./application/config/ion_auth.php */

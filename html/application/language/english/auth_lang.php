@@ -28,6 +28,7 @@ $lang['login_password_label']  = 'Password:';
 $lang['login_remember_label']  = 'Remember Me:';
 $lang['login_submit_btn']      = 'Login';
 $lang['login_forgot_password'] = 'Forgot your password?';
+$lang['login_new_user']		 	 = 'Create New Account';
 
 // Index
 $lang['index_heading']           = 'Users';

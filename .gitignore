@@ -1,4 +1,10 @@
 # ignore backup files
 **~
-# Ignore the downloads directory
+#
+# Ignore the downloads directory and the contents
 downloads/*
+downloads
+#
+# Ignore the phpMyAdmin directory and its contents
+html/phpMyAdmin/*
+html/phpMyAdmin

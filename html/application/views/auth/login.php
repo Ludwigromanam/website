@@ -20,9 +20,9 @@
     <?php echo form_checkbox('remember', '1', FALSE, 'id="remember"');?>
   </p>
 
-
   <p><?php echo form_submit('submit', lang('login_submit_btn'));?></p>
 
 <?php echo form_close();?>
 
+<p><a href="new_account"><?php echo lang('login_new_user');?></a></p>
 <p><a href="forgot_password"><?php echo lang('login_forgot_password');?></a></p>
